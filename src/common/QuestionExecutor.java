@@ -10,9 +10,9 @@ public class QuestionExecutor {
 
     public static void executor(ProgrammersQuestionCode questionCode){
 
-        TestCaseInjectionTrigger trigger = questionCode.getCaseInjectionTrigger();
+        TestCaseInjectionTrigger caseInjectionTrigger = questionCode.getCaseInjectionTrigger();
         try {
-            trigger.getClass().getMethod("trigger").invoke(trigger);
+            caseInjectionTrigger.getClass().getMethod("trigger").invoke(caseInjectionTrigger);
         } catch (Exception e) {
             e.printStackTrace();
         }
