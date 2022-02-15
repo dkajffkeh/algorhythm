@@ -5,6 +5,7 @@ import common.type.YnType;
 import programmers.level1.addmissingnums.AddMissingNumbers;
 import programmers.level1.keypad.PressingKeypads;
 import programmers.level1.lotteryminmax.LotteryGetMinMaxApplication;
+import programmers.level1.notcompletionexpert.NotCompletionExpert;
 import programmers.level1.reportresultcounter.ReportResultCounterApplication;
 import programmers.level1.stringandwords.StringAndWords;
 
@@ -42,6 +43,13 @@ public enum ProgrammersQuestionCode {
             ,"https://programmers.co.kr/learn/courses/30/lessons/86051"
             , Y
             ,new AddMissingNumbers()),
+
+    LEVEL1_QUESTION_42576(
+            "[완주하지 못한 선수]"
+            ,"https://programmers.co.kr/learn/courses/30/lessons/42576"
+            , N
+            ,new NotCompletionExpert()),
+
     ;
 
     private final String questionName;
