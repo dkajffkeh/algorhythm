@@ -2,8 +2,6 @@ package common;
 
 import common.trigger.TestCaseInjectionTrigger;
 
-
-
 public class QuestionExecutor {
 
     private QuestionExecutor(){}
