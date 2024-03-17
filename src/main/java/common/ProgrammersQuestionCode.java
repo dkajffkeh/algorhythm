@@ -4,6 +4,7 @@ import common.trigger.TestCaseInjectionTrigger;
 import common.type.YnType;
 import leetcode.level1.IsoMorphicString;
 import programmers.level1.addmissingnums.AddMissingNumbers;
+import programmers.level1.bandage.Bandage;
 import programmers.level1.keypad.PressingKeypads;
 import programmers.level1.lotteryminmax.LotteryGetMinMaxApplication;
 import programmers.level1.makeburger.BurgerMaker;
@@ -11,6 +12,7 @@ import programmers.level1.notcompletionexpert.NotCompletionExpert;
 import programmers.level1.present.PresentGivenTheMost;
 import programmers.level1.reportresultcounter.ReportResultCounterApplication;
 import programmers.level1.stringandwords.StringAndWords;
+import programmers.level1.walkinginthepark.WorkingInThePark;
 
 import static common.type.YnType.N;
 import static common.type.YnType.Y;
@@ -75,7 +77,13 @@ public enum ProgrammersQuestionCode {
             "[PCCP 기출문제] 1번 / 붕대 감기"
             ,"https://school.programmers.co.kr/learn/courses/30/lessons/250137"
             , Y
-            ,new PresentGivenTheMost()),
+            ,new Bandage()),
+
+    LEVEL1_QUESTION_172928(
+            "공원산책"
+            ,"https://school.programmers.co.kr/learn/courses/30/lessons/250137"
+            , Y
+            ,new WorkingInThePark()),
     ;
 
 
