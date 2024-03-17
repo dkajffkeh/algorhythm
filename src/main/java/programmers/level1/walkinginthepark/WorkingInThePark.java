@@ -10,24 +10,30 @@ public class WorkingInThePark implements TestCaseInjectionTrigger {
     @Override
     public void trigger() {
         int[] result1 = solution(
-                new String[]{"SOO", "OOO", "OOO"},
-                new String[]{"E 2", "S 2", "W 1"});
+                new String[]{"OSO","OOO","OXO","OOO"},
+                new String[]{"E 2","S 3","W 1"});
         System.out.println(Arrays.toString(result1));
     }
 
     public int[] solution(String[] park, String[] routes) {
-        int[] answer = {};
         Park parkArr = new Park(park);
-
-        return answer;
+        RobotDog robotDog = new RobotDog(parkArr.getStartPoint());
+        for(String route : routes) {
+            robotDog.moveByDirection(route, parkArr);
+        }
+        return robotDog.getCurrentPosition();
     }
 
     private static class RobotDog {
 
-        private int[] currentPosition;
+        private final int[] currentPosition;
 
         public RobotDog(int[] currentPosition) {
             this.currentPosition = currentPosition;
+        }
+
+        public int[] getCurrentPosition() {
+            return currentPosition;
         }
 
         public void moveByDirection(String moveInfo, Park park) {
@@ -108,15 +114,19 @@ public class WorkingInThePark implements TestCaseInjectionTrigger {
         }
 
         public boolean isSouthMovable(int[] currentPosition, int moveCount) {
-            if(currentPosition[0] + moveCount > this.park.size()) {
+            if (currentPosition[0] + moveCount > this.park.size()) {
                 return false;
             }
-            
-            return true;
+            return this.park.subList(currentPosition[0], currentPosition[0] + moveCount)
+                    .stream().noneMatch(column -> column.get(currentPosition[1]).equals(BLOCK));
         }
 
         public boolean isNorthMovable(int[] currentPosition, int moveCount) {
-            return true;
+            if (currentPosition[0] - moveCount < 0) {
+                return false;
+            }
+            return this.park.subList(currentPosition[0] - moveCount, currentPosition[0])
+                    .stream().noneMatch(column -> column.get(currentPosition[1]).equals(BLOCK));
         }
     }
 }
