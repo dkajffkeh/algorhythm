@@ -2,10 +2,13 @@ package common;
 
 import common.trigger.TestCaseInjectionTrigger;
 import common.type.YnType;
+import leetcode.level1.IsoMorphicString;
 import programmers.level1.addmissingnums.AddMissingNumbers;
 import programmers.level1.keypad.PressingKeypads;
 import programmers.level1.lotteryminmax.LotteryGetMinMaxApplication;
+import programmers.level1.makeburger.BurgerMaker;
 import programmers.level1.notcompletionexpert.NotCompletionExpert;
+import programmers.level1.present.PresentGivenTheMost;
 import programmers.level1.reportresultcounter.ReportResultCounterApplication;
 import programmers.level1.stringandwords.StringAndWords;
 
@@ -50,7 +53,31 @@ public enum ProgrammersQuestionCode {
             , Y
             ,new NotCompletionExpert()),
 
+    LEVEL1_QUESTION_133502(
+            "[햄버거 만들기]"
+            ,"https://school.programmers.co.kr/learn/courses/30/lessons/133502?language=java"
+            , Y
+            ,new BurgerMaker()),
+
+    ISOMORPHIC_STRING(
+            "[Isomorphic Strings]"
+            ,"https://leetcode.com/problems/isomorphic-strings/?envType=study-plan&id=level-1"
+            , Y
+            ,new IsoMorphicString()),
+
+    LEVEL1_QUESTION_25872(
+            "[가장 많이 받은 선물]"
+            ,"https://school.programmers.co.kr/learn/courses/30/lessons/258712?language=java"
+            , Y
+            ,new PresentGivenTheMost()),
+
+    LEVEL1_QUESTION_250137(
+            "[PCCP 기출문제] 1번 / 붕대 감기"
+            ,"https://school.programmers.co.kr/learn/courses/30/lessons/250137"
+            , Y
+            ,new PresentGivenTheMost()),
     ;
+
 
     private final String questionName;
     private final String questionURI;

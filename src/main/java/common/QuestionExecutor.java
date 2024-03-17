@@ -8,7 +8,6 @@ public class QuestionExecutor {
 
     public static void executor(ProgrammersQuestionCode questionCode){
 
-
         TestCaseInjectionTrigger caseInjectionTrigger = questionCode.getCaseInjectionTrigger();
         try {
             System.out.println();
