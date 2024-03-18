@@ -10,8 +10,8 @@ public class WorkingInThePark implements TestCaseInjectionTrigger {
     @Override
     public void trigger() {
         int[] result1 = solution(
-                new String[]{"OSO","OOO","OXO","OOO"},
-                new String[]{"E 2","S 3","W 1"});
+                new String[]{"SXOOXX","OOOOOO","OOO"},
+                new String[]{"E 1"});
         System.out.println(Arrays.toString(result1));
     }
 
@@ -94,12 +94,12 @@ public class WorkingInThePark implements TestCaseInjectionTrigger {
 
         public boolean isEastMovable(int[] currentPosition, int moveCount) {
             // 오른쪽으로 넘어가는 걍우.
-            if (currentPosition[1] + moveCount > this.park.get(0).size()) {
+            if (currentPosition[1] + moveCount + 1 > this.park.get(0).size()) {
                 return false;
             }
             // X 가 있는 경우
             return this.park.get(currentPosition[0])
-                    .subList(currentPosition[1], currentPosition[1] + moveCount)
+                    .subList(currentPosition[1], currentPosition[1] + moveCount + 1)
                     .stream().noneMatch(column -> column.equals(BLOCK));
         }
 
@@ -109,15 +109,15 @@ public class WorkingInThePark implements TestCaseInjectionTrigger {
             }
 
             return this.park.get(currentPosition[0])
-                    .subList(currentPosition[1] - moveCount, currentPosition[1])
+                    .subList(currentPosition[1] - moveCount, currentPosition[1]  + 1)
                     .stream().noneMatch(column -> column.equals(BLOCK));
         }
 
         public boolean isSouthMovable(int[] currentPosition, int moveCount) {
-            if (currentPosition[0] + moveCount > this.park.size()) {
+            if (currentPosition[0]+ moveCount + 1 > this.park.size()) {
                 return false;
             }
-            return this.park.subList(currentPosition[0], currentPosition[0] + moveCount)
+            return this.park.subList(currentPosition[0], currentPosition[0] + moveCount + 1)
                     .stream().noneMatch(column -> column.get(currentPosition[1]).equals(BLOCK));
         }
 
@@ -125,7 +125,7 @@ public class WorkingInThePark implements TestCaseInjectionTrigger {
             if (currentPosition[0] - moveCount < 0) {
                 return false;
             }
-            return this.park.subList(currentPosition[0] - moveCount, currentPosition[0])
+            return this.park.subList(currentPosition[0] - moveCount, currentPosition[0] + 1)
                     .stream().noneMatch(column -> column.get(currentPosition[1]).equals(BLOCK));
         }
     }
