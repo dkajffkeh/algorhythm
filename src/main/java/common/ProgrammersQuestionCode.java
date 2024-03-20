@@ -4,10 +4,12 @@ import common.trigger.TestCaseInjectionTrigger;
 import common.type.YnType;
 import leetcode.level1.IsoMorphicString;
 import programmers.level1.addmissingnums.AddMissingNumbers;
+import programmers.level1.analyzedata.AnalyzeData;
 import programmers.level1.bandage.Bandage;
 import programmers.level1.keypad.PressingKeypads;
 import programmers.level1.lotteryminmax.LotteryGetMinMaxApplication;
 import programmers.level1.makeburger.BurgerMaker;
+import programmers.level1.neighborblock.NeighborBlock;
 import programmers.level1.notcompletionexpert.NotCompletionExpert;
 import programmers.level1.present.PresentGivenTheMost;
 import programmers.level1.reportresultcounter.ReportResultCounterApplication;
@@ -84,6 +86,18 @@ public enum ProgrammersQuestionCode {
             ,"https://school.programmers.co.kr/learn/courses/30/lessons/250137"
             , Y
             ,new WorkingInThePark()),
+
+    LEVEL1_QUESTION_250121(
+            "데이터 분석"
+            ,"https://school.programmers.co.kr/learn/courses/30/lessons/250121"
+            , Y
+            ,new AnalyzeData()),
+
+    LEVEL1_QUESTION_250125(
+            "[PCCE 기출문제] 9번 / 이웃한 칸"
+            ,"https://school.programmers.co.kr/learn/courses/30/lessons/250125"
+            , Y
+            ,new NeighborBlock()),
     ;
 
 
