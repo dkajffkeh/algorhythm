@@ -2,7 +2,6 @@ package programmers.level1;
 
 import java.util.HashMap;
 import java.util.Map;
-import org.junit.jupiter.api.Test;
 
 public class YearNing {
 

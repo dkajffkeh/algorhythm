@@ -12,14 +12,17 @@ public class Chromosome {
         String good = "Good";
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int questions = Integer.parseInt(br.readLine());
 
+        String start = "ABCDEF";
+        char[] element = {'A', 'F', 'C'};
 
-    }
+        while(questions > 0) {
+            questions--;
 
-    @Test
-    void jmeterTest() {
-        for (int i = 1; i < 5000000 ; i++) {
-            System.out.println(i);
+            String input = br.readLine();
+
         }
     }
+
 }
