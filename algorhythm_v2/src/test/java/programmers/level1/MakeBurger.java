@@ -18,9 +18,7 @@ public class MakeBurger {
             if(stringBuilder.length() < 4) {
                 stringBuilder.append(singleIng);
             }
-
             stringBuilder.append(singleIng);
-            
         }
         return answer;
     }
