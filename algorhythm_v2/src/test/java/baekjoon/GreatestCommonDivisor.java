@@ -10,6 +10,7 @@ public class GreatestCommonDivisor {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String [] dataChunk = br.readLine().split(" ");
+
         int first = Integer.parseInt(dataChunk[0]);
         int second = Integer.parseInt(dataChunk[1]);
 
